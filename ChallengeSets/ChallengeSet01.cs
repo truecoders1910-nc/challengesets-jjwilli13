@@ -21,7 +21,9 @@ namespace ChallengeSets
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int sum = number1 + number2;
+               Console.WriteLine(sum);
+               return sum;
         }
 
         public int GetSmallestNumber(int number1, int number2)
