@@ -5,37 +5,74 @@ namespace ChallengeSets
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            throw new NotImplementedException();
+            if (num1 == num2)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            double difference = minuend - subtrahend;
+            Console.WriteLine(difference);
+            return difference;
         }
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int sum = number1 + number2;
+            Console.WriteLine(sum);
+            return sum;
         }
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+
+            if (number1 > number2)
+            {
+                return number2;
+            }
+            return number1;
         }
+
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            long product = factor1 * factor2;
+            Console.WriteLine(product);
+            return product;
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+
+
+            string personName = ($"Hello, {nameOfPerson}!");
+            string noName = ("Hello!");
+
+            if (nameOfPerson == "")
+
+            {
+
+                return noName;
+
+            }
+            return personName;
+
+
         }
+
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+
+            string str = "HEY!";
+
+            return str;
+
+
+
         }
     }
 }
