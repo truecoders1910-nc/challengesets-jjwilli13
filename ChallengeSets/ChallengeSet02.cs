@@ -7,8 +7,13 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
-        }
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            {
+                return true;
+            }
+            return false;
+
+        }       
 
         public bool CountOfElementsIsEven(string[] vals)
         {
