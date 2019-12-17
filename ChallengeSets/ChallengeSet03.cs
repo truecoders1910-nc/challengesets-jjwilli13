@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -7,17 +8,42 @@ namespace ChallengeSets
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            bool contains = false;
+
+            for (var i = 0; i < vals.Length; i++)
+            {
+                if (vals [i] == false)
+                {
+                    return true;
+                }
+
+            }
+            return contains;
+
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
+
             throw new NotImplementedException();
+
+
+
+
+
+
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+
+            if (password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit))
+            {
+                return true;
+            }
+            return false;
+
+
         }
 
         public char GetFirstLetterOfString(string val)
