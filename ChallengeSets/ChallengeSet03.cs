@@ -6,6 +6,7 @@ namespace ChallengeSets
 {
     public class ChallengeSet03
     {
+
         public bool ArrayContainsAFalse(bool[] vals)
         {
             bool contains = false;
@@ -48,32 +49,84 @@ namespace ChallengeSets
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+
+
+            return val[0];
+
+
         }
+
+
 
         public char GetLastLetterOfString(string val)
         {
 
-            throw new NotImplementedException();
+
+            return val[^1];
+
+
         }
+
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+
+            if (divisor == 0)
+            {
+                return 0;
+            }
+            return dividend / divisor;
+
         }
+
+
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+
+            return nums[nums.Length - 1] - nums[0];
+
+
         }
+
+
+
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+
+            List<int> numbers = new List<int>();
+
+            { for (int i = 1; i <= 100; i++)
+            
+                if (i % 2 != 0)
+                {
+                  numbers.Add(i);
+                
+                }
+
+            }
+            int[] numbers1 = new int[numbers.Count];
+            for (int j = 0; j < numbers.Count; j++)
+            {
+
+                numbers1[j] = numbers[j];
+            }
+            return numbers1;
+                    
+            
+           
+
         }
+        
+
+
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+
+            for (int i = 0; i < words.Length; i++)
+                words[i] = words[i].ToUpper();
+
         }
     }
 }
