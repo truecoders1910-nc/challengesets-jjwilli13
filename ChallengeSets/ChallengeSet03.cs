@@ -26,7 +26,25 @@ namespace ChallengeSets
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
 
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+
+                return false;
+
+            }
+            int sum = 0;
+            bool odd = false;
+
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            if (sum % 2 != 0)
+            {
+                odd = true;
+                
+            }
+            return odd;
 
 
 
@@ -113,12 +131,9 @@ namespace ChallengeSets
             }
             return numbers1;
                     
-            
-           
 
         }
         
-
 
 
         public void ChangeAllElementsToUppercase(string[] words)
