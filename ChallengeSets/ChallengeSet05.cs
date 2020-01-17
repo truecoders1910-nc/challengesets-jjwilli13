@@ -31,7 +31,7 @@ namespace ChallengeSets
             if (numbers == null || numbers.Length == 0)
             {
                 return false;
-            }
+            }   
 
             for (int i = 1; i < numbers.Length; i++)
             {
@@ -46,7 +46,25 @@ namespace ChallengeSets
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            int sum = 0;
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i - 1] % 2 == 0)
+                {
+                    sum += numbers[i];
+                }
+                
+
+            }
+            return sum;
+
         }
 
         public string TurnWordsIntoSentence(string[] words)
@@ -76,13 +94,38 @@ namespace ChallengeSets
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            if (elements == null)
+            {
+                return new double[0];
+            }
+
+            List<double> everyFourth = new List<double>();
+
+            for (int i = 3; i < elements.Count; i +=4)
+            {
+
+                everyFourth.Add(elements[i]);
+
+            }
+            return everyFourth.ToArray();
+
+
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
 
-            throw new NotImplementedException();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int k = i + 1; k < nums.Length; k++)
+                {
+                    if (nums[i] + nums[k] == targetNumber)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
 
         }
     }
